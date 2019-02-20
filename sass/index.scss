@@ -1,0 +1,49 @@
+@import "compass/reset"
+*{
+	padding: 0;
+	margin: 0;
+}
+ul,li{
+	list-style: none;
+}
+.root{
+	max-width: 640px;
+	height: 100vh;
+}
+@mixin show($width, $height, $bg_color,$position,$left,$top){
+	width: $width;
+	height: $height;
+	background: $bg_color;
+	position: $position;
+	left: $left;
+	top: $top;
+}
+.swiper-container{
+	width: 100%;
+	height: 100vh;
+	>.swiper-wrapper{
+		>.swiper-slide{
+			background: url(../img/a344f317-a976-4a2c-ab73-9389cb4994a9.webp) no-repeat center center/100% 100%;
+			position: relative;
+			>.img_one{
+			@include show(100%, 100%,url(../img/01c9c2cf-353e-48d2-a5ff-595b47654514.webp) no-repeat center center/100% 100%,absolute,0,0);
+			transform: rotate(45deg);
+			}
+			>.img_two{
+			@include show(90%, 92%,url(../img/9e24b002-8c4d-4633-8f8c-f4066adb30bc.webp) no-repeat center center/100% 100%,absolute,26px,40px);
+			transform: rotate(45deg);
+
+			>img{
+				width: 92%;
+				height: 94%;
+			}
+			}
+			>.img_three{
+			@include show(80%, 84%,url(../img/f75dea71-a14e-4b2a-b234-99ae087e154c.webp) no-repeat center center/100% 100%,absolute,38px,50px);
+			}
+// 			>.active{
+// 				@animation(move,)
+// 			}
+		}
+	}
+}
